@@ -78,6 +78,15 @@
 			}
 		}
 	}
+
+	.topheader-wrapper {
+		.header-title {
+			width: 60%;
+		}
+		.profile-wrapper {
+			width: 40%;
+		}
+	}
 }
 
 @media screen and (max-width: 992px) {

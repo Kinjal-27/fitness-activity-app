@@ -9,7 +9,7 @@ const TopHeader = ({ user }: ITopHeaderProps) => {
 	return (
 		<div className='topheader-wrapper flex-space-between'>
 			<div className='width--full flex height--full'>
-				<div className='header-title'>Let's start workouts</div>
+				<div className='header-title'>Stay healthy & Strong</div>
 				<div className='profile-wrapper flex justify-content--end align-items--center'>
 					<div>
 						<p className='font-size--xs date mb--5'>{date}</p>

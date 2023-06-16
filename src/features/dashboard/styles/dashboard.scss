@@ -1,0 +1,32 @@
+.dashboard-wrapper {
+	color: black;
+
+	.activity-list--wrapper {
+		padding: 20px;
+		.overview-title {
+			font-stretch: extra-expanded;
+		}
+	}
+	.goals-wrapper {
+		width: calc(100% - 30px);
+		margin: 30px;
+		.motivational-card--wrapper {
+			width: calc(40% - 40px);
+			height: 200px;
+			background: #587ab9;
+			border-radius: 20px;
+			color: white;
+			display: flex;
+			justify-content: space-between;
+			.description-wrapper {
+				padding: 20px;
+			}
+			.description {
+				font-size: 24px;
+			}
+			.exercising-women {
+				border-radius: 20px;
+			}
+		}
+	}
+}
