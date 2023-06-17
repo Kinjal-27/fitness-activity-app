@@ -1207,6 +1207,10 @@
 	color: $black;
 }
 
+.text--gray {
+	color: $gray;
+}
+
 /* Background
 ------------------------------------------------------------------------------*/
 
@@ -1349,8 +1353,8 @@
 		transition: all 0.3s ease-in-out;
 		overflow: hidden;
 		height: 100vh;
+		background-color: #1e1e1e;
 		.title-logo {
-			background-color: #e3e6f3;
 			.app-title {
 				color: $purple;
 				font-size: 22px;
@@ -1386,10 +1390,8 @@
 
 			&:hover,
 			&:active {
-				border-left: 2px solid $purple;
-
 				.nav-link-content {
-					background-color: #f7f5fe;
+					// background-color: #eeeff4c4;
 
 					svg {
 						path {
@@ -1405,10 +1407,8 @@
 		}
 
 		.active-menu {
-			border-left: 2px solid $purple;
-
 			.nav-link-content {
-				background-color: #e3e6f3;
+				background-color: rgb(17, 17, 17);
 
 				svg {
 					path {
@@ -1447,14 +1447,15 @@
 /* Top header */
 
 .topheader-wrapper {
-	width: calc(100vw - 190px);
+	width: calc(100vw - 100px);
 	background-color: $white;
 	color: $purple;
 	height: 82px;
 	padding: 0 15px;
+	background-color: #1e1e1e;
 
 	.header-title {
-		color: black;
+		color: $white;
 		display: flex;
 		align-items: center;
 		font-size: 22px;
@@ -1466,14 +1467,14 @@
 	.profile-wrapper {
 		width: 30%;
 		.avatar-img {
-			width: 80px;
+			width: 60px;
 		}
 
 		.date {
 			color: #909ba8;
 		}
 		.avatar-name {
-			color: rgb(78, 76, 76);
+			color: #b3b3b3;
 		}
 
 		.dropdown {

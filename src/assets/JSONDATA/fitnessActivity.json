@@ -5,7 +5,44 @@
 		"email": "johndoe@example.com",
 		"age": 30,
 		"height": 180,
-		"weight": 75
+		"weight": 75,
+		"overview": {
+			"total_calories_burn_per": 33.5,
+			"max_calories_burn_per": 1.25,
+			"protein_per": 23.02,
+			"max_protein_per": 3.43,
+			"carbs_per": 11.24,
+			"max_carbs_per": 2.12,
+			"total_of_health_per": "+23"
+		},
+		"fitness_goal": [
+			{
+				"activity": "Running",
+				"goal": "Complete a 10K race",
+				"duration": "30 minutes",
+				"frequency": "3 times per week"
+			},
+			{
+				"activity": "Swimming",
+				"goal": "Swim 1 mile without stopping",
+				"duration": "45 minutes",
+				"frequency": "2 times per week"
+			}
+		],
+		"todays_activity": [
+			{
+				"activity_name": "Squats",
+				"duration": "10 seats of squats"
+			},
+			{
+				"activity_name": "Low Lungs",
+				"duration": "15 seats of lungs"
+			},
+			{
+				"activity_name": "Battling rope",
+				"duration": "20 seats of battling"
+			}
+		]
 	},
 	"activities": [
 		{
