@@ -1,12 +1,13 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Layout from 'hoc/layout/layout';
+import Dashboard from 'features/dashboard/dashboard';
 
 const App: React.FC = () => {
 	return (
 		<Layout>
 			<Routes>
-				<Route path='/' />
+				<Route path='/' element={<Dashboard />} />
 			</Routes>
 		</Layout>
 	);

@@ -1,3 +1,4 @@
+@import '../variable';
 .d--inline-block {
 	@extend %d--inline-block;
 }
@@ -1338,4 +1339,143 @@
 .error {
 	color: getColor($red, 200);
 	@include marginTop(10px);
+}
+
+/* Sidenav scss */
+
+.navbar-default {
+	background-color: #1e1e1e;
+	.navbar-static-side {
+		background-color: #1e1e1e;
+		width: 70px;
+		transition: all 0.3s ease-in-out;
+		overflow: hidden;
+		height: 100vh;
+		.title-logo {
+			.app-title {
+				color: $purple;
+				font-size: 22px;
+				font-weight: $font-bold;
+			}
+		}
+
+		.nav-link {
+			border-left: 2px solid transparent;
+			transition: all 0.3s linear;
+			display: flex;
+			margin-top: 40px;
+
+			.nav-link-content {
+				width: 100%;
+				height: 40px;
+				background-color: transparent;
+				border-radius: 50px 0 0 50px;
+				transition: all 0.3s ease-in-out;
+
+				svg {
+					padding: 10px 12px 10px 20px;
+
+					path {
+						transition: fill 0.3s ease-in-out;
+					}
+				}
+
+				.menu-label {
+					color: #88949d;
+				}
+			}
+
+			&:hover,
+			&:active {
+				.nav-link-content {
+					// background-color: #eeeff4c4;
+
+					svg {
+						path {
+							fill: $purple;
+						}
+					}
+
+					.menu-label {
+						color: $purple;
+					}
+				}
+			}
+		}
+
+		.active-menu {
+			.nav-link-content {
+				background-color: rgb(17, 17, 17);
+
+				svg {
+					path {
+						fill: $purple;
+					}
+				}
+
+				.menu-label {
+					color: $purple;
+				}
+			}
+		}
+
+		&.collapsed {
+			width: 160px;
+
+			.nav-link {
+				.menu-label {
+					display: block;
+				}
+			}
+			.active-menu {
+				.nav-link-content {
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+	}
+
+	.collapse-icon {
+		margin: 10px 10px 10px 15px;
+	}
+}
+
+/* Top header */
+
+.topheader-wrapper {
+	width: calc(100vw - 100px);
+	background-color: $white;
+	color: $purple;
+	height: 82px;
+	padding: 0 15px;
+	background-color: #1e1e1e;
+
+	.header-title {
+		color: $white;
+		display: flex;
+		align-items: center;
+		font-size: 22px;
+		font-weight: 500;
+		height: 100%;
+		width: 70%;
+	}
+
+	.profile-wrapper {
+		width: 30%;
+		.avatar-img {
+			width: 60px;
+		}
+
+		.date {
+			color: #909ba8;
+		}
+		.avatar-name {
+			color: #b3b3b3;
+		}
+
+		.dropdown {
+			rotate: 180deg;
+		}
+	}
 }
