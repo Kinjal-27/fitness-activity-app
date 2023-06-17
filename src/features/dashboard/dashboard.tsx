@@ -6,6 +6,8 @@ import Overview from '../dashboard/components/overview';
 import TodayActivity from './components/todaysActivity';
 import Goals from './components/goals';
 import '../dashboard/styles/dashboard.scss';
+import Activities from './components/activities';
+import ActivityChart from './components/activityChart';
 
 const Dashboard = () => {
 	const [fitnessActivityData, setFitnessActivityData] = useState(activityData);
@@ -16,10 +18,16 @@ const Dashboard = () => {
 	return (
 		<div className='dashboard-wrapper'>
 			<TopHeader user={name} />
-			<div className='fitness-detail--wrapper'>
-				<Overview userOverview={overview} />
-				<TodayActivity todayActivityData={todays_activity} />
-				<Goals fitnessGoalsData={fitness_goal} />
+			<div className='fitness-detail--wrapper flex--column'>
+				<div className='flex'>
+					<Overview userOverview={overview} />
+					<TodayActivity todayActivityData={todays_activity} />
+					<Goals fitnessGoalsData={fitness_goal} />
+				</div>
+				<div className='flex'>
+					<Activities activityData={activities} />
+					<ActivityChart />
+				</div>
 			</div>
 		</div>
 	);

@@ -21,7 +21,7 @@ const Goals = ({ fitnessGoalsData }: Record<string, any>) => {
 			<h5 className='overview-title mb--35'>Fitness Goals</h5>
 			{fitnessGoalsData.map((goalActivity: any, index: number) => {
 				return (
-					<div key={index} className='card-wrapper mb--45'>
+					<div key={index} className='card-wrapper mb--35'>
 						<div className='flex flex--column'>
 							<div
 								className={`activity-img--wrapper`}
@@ -35,9 +35,14 @@ const Goals = ({ fitnessGoalsData }: Record<string, any>) => {
 									className='activity-img'
 								/>
 							</div>
-							<div className='goal-title-description mb--10'>
-								<p>{goalActivity.activity}</p>
-								<p className='ml--20'>{goalActivity.duration}</p>
+							<div className='goal-title-description mb--15'>
+								<p className='text--white'>{goalActivity.activity}</p>
+								<p
+									className='ml--20 font--medium'
+									style={{ color: activityColorMapper[goalActivity.activity] }}
+								>
+									{goalActivity.duration}
+								</p>
 							</div>
 							<p className='text--gray mr--30 font-size--sm'>{goalActivity.goal}</p>
 						</div>

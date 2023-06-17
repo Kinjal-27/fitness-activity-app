@@ -5,7 +5,7 @@
 	.fitness-detail--wrapper {
 		padding: 30px 25px;
 		display: flex;
-		width: calc(100% - 100px);
+		width: calc(100% - 50px);
 		.overview-title {
 			color: rgb(212, 208, 208);
 			font-weight: 500;
@@ -89,9 +89,14 @@
 			width: 30%;
 			.card-wrapper {
 				width: 100%;
+				max-width: 400px;
 				background-color: #1e1e1e;
 				padding: 10px 20px;
 				border-radius: 15px;
+				.goal-title-description {
+					display: flex;
+					justify-content: space-between;
+				}
 				.activity-img--wrapper {
 					width: fit-content;
 					height: fit-content;
@@ -100,13 +105,62 @@
 					margin-top: -35px;
 					margin-bottom: 10px;
 					.activity-img {
-						width: 40px;
+						width: 35px;
 					}
 				}
-				.goal-title-description {
-					color: white;
-					display: flex;
-					justify-content: space-between;
+			}
+		}
+		.calory-wrapper {
+			width: fit-content;
+			height: fit-content;
+			padding: 0 5px;
+			border-radius: 15px;
+			margin-right: 10px;
+			.calories-burn {
+				width: 20px;
+				margin: 2px;
+			}
+		}
+		.activity-table {
+			background-color: #1e1e1e;
+			padding: 10px 20px;
+			border-radius: 15px;
+			.table-body {
+				.table-row {
+					td {
+						margin-bottom: 10px;
+					}
+					.activity-name-date {
+						padding: 5px 30px 5px 10px;
+						.activity-name {
+							color: $white;
+							font-size: 18px;
+							margin-bottom: 5px;
+						}
+						.activity-date {
+							color: gray;
+						}
+					}
+					.table-data {
+						color: gray;
+						padding: 5px 50px;
+						.heart-svg {
+							width: 50px;
+							height: 50px;
+							fill: rgb(180, 60, 60);
+							margin-right: 10px;
+						}
+					}
+					.table-activity-img--wrapper {
+						width: fit-content;
+						height: fit-content;
+						padding: 0 5px;
+						border-radius: 15px;
+						margin-bottom: 5px;
+						.table-activity-img {
+							width: 35px;
+						}
+					}
 				}
 			}
 		}
