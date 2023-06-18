@@ -9,11 +9,11 @@ const TopHeader = ({ user }: ITopHeaderProps) => {
 	return (
 		<div className='topheader-wrapper flex-space-between'>
 			<div className='width--full flex height--full'>
-				<div className='header-title'>Stay healthy & Strong</div>
+				<div className='header-title'>FITNESS ACTIVITY</div>
 				<div className='profile-wrapper flex justify-content--end align-items--center'>
 					<div>
-						<p className='font-size--xs date mb--5'>{date}</p>
-						<p className='avatar-name mr--10 font-size--lg'>Good day, {user.split(' ')[0]}!</p>
+						<p className='font-size--xxs date mb--5'>{date}</p>
+						<p className='avatar-name mr--10 font-size--md'>Good day, {user.split(' ')[0]}!</p>
 					</div>
 					<img src={Profile} alt='profile' className='avatar-img' />
 				</div>

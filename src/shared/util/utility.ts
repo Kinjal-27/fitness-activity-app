@@ -49,10 +49,13 @@ export const debounce = (func: any, wait = 400) => {
 		h = setTimeout(() => func(...args), wait);
 	};
 };
-export const generateColor = () => {
-	const x = Math.floor(Math.random() * 256);
-	const y = Math.floor(Math.random() * 256);
-	const z = Math.floor(Math.random() * 256);
-	const RGBColor = `${x} ,${y}, ${z}`;
-	return RGBColor;
+export const getRandomColor = () => {
+	const colors = ['#6de1ff', '#0b8aab', '#004152', '#30aeba', '#008b95', '#0f5473'];
+	const randomIndex = Math.floor(Math.random() * colors.length);
+	return colors[randomIndex];
+};
+export const formatDate = (dateString: string) => {
+	const date = new Date(dateString);
+	const options = { month: 'long', day: 'numeric' };
+	return date.toLocaleDateString('en-US', options as any);
 };

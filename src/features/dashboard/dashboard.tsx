@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import TopHeader from 'shared/components/topHeader/topHeader';
 
-import activityData from 'assets/JSONDATA/fitnessActivity.json';
-import FitnessWomen from 'assets/images/fitness-women.png';
+import Overview from '../dashboard/components/overview';
+import TodayActivity from './components/todaysActivity';
+import Goals from './components/goals';
 import '../dashboard/styles/dashboard.scss';
+import Activities from './components/activities';
+import ActivityChart from './components/activityChart';
+import activityData from 'assets/JSONDATA/fitnessActivity.json';
 
 const Dashboard = () => {
 	const [fitnessActivityData, setFitnessActivityData] = useState(activityData);
-	const [user, setUser] = useState('');
 
-	useEffect(() => {
-		setUser(fitnessActivityData.user.name);
-	}, []);
+	const { user, activities } = fitnessActivityData;
+	const { fitness_goal, overview, todays_activity } = user;
+
 	return (
 		<div className='dashboard-wrapper'>
-			<TopHeader user={user} />
-			<div className='goals-wrapper'>
-				<div className='motivational-card--wrapper'>
-					<div className='description-wrapper'>
-						<p className='description mb--10'>Set your goals</p>
-						<p className='description'>And motivate yourself</p>
-					</div>
-					<img src={FitnessWomen} alt='fitness-women' className='exercising-women' />
+			<div className='fitness-detail--wrapper flex--column'>
+				<div className='flex'>
+					<Overview userOverview={overview} />
+					<TodayActivity todayActivityData={todays_activity} />
+					<Goals fitnessGoalsData={fitness_goal} />
 				</div>
-			</div>
-			<div className='activity-list--wrapper'>
-				<p className='overview-title font-size--22'>OVERVIEW</p>
+				<div className='flex'>
+					<Activities activityData={activities} />
+					<ActivityChart activityChartData={activities} />
+				</div>
 			</div>
 		</div>
 	);

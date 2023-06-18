@@ -15,3 +15,7 @@ export interface IAction {
 	type: string;
 	payload: any;
 }
+
+export interface IObj {
+	[key: string]: string | number;
+}
