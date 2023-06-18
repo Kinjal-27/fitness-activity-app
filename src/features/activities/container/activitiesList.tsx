@@ -150,7 +150,7 @@ const ActivitiesList = () => {
 										<div className='back-arrow cursor--pointer' onClick={() => navigate(-1)}>
 											<BackArrowIcon className='back-arrow-svg' />
 										</div>
-										<div>
+										<div className='flex'>
 											<div
 												className='img-wrapper'
 												style={{
