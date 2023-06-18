@@ -11,21 +11,12 @@ import {
 	Legend,
 	ArcElement
 } from 'chart.js';
-import { Doughnut, Line } from 'react-chartjs-2';
-import { NONAME } from 'dns';
+import { Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement);
 
 const overview = ({ userOverview }: Record<string, any>) => {
-	const {
-		carbs_per,
-		total_calories_burn_per,
-		max_calories_burn_per,
-		max_carbs_per,
-		max_protein_per,
-		protein_per,
-		total_of_health_per
-	} = userOverview;
+	const { carbs_per, total_calories_burn_per, protein_per } = userOverview;
 
 	const data = {
 		datasets: [

@@ -1,11 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Running from 'assets/images/running.png';
 import Swimming from 'assets/images/swimming.png';
 import Cycling from 'assets/images/cycling.png';
 import Strength from 'assets/images/strength.png';
 import CaloryBurn from 'assets/images/calories.png';
 import { HeartRate } from 'shared/components/icons/icons';
-import { useNavigate } from 'react-router-dom';
 
 const Activities = ({ activityData }: Record<string, any>) => {
 	const navigate = useNavigate();
@@ -38,7 +39,7 @@ const Activities = ({ activityData }: Record<string, any>) => {
 						return (
 							<tr
 								key={index}
-								className='table-row flex'
+								className='table-row flex cursor--pointer'
 								onClick={() => navigate(`/activity/${activity.id}`)}
 							>
 								<td

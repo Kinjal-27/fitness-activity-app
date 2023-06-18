@@ -22,6 +22,65 @@
 					}
 				}
 			}
+			.detail-wrapper {
+				margin-top: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				.card-wrapper {
+					width: 100%;
+					max-width: 350px;
+					background-color: #1e1e1e;
+					padding: 15px 20px 30px 15px;
+					border-radius: 15px;
+					margin: 20px;
+					.card-img--wrapper {
+						width: fit-content;
+						height: fit-content;
+						padding: 5px 10px;
+						border-radius: 15px;
+						margin-top: -35px;
+						margin-bottom: 15px;
+						// margin: -35px auto 10px auto;
+
+						.card-img {
+							width: 40px;
+						}
+					}
+					.calory-img {
+						background-color: #fad578;
+					}
+					.heart-rate-img {
+						background-color: #688d95;
+					}
+					.steps-img {
+						background-color: #6f4bdb;
+					}
+					.value {
+						font-weight: medium;
+						font-size: 18px;
+					}
+					.calories {
+						color: #fad578;
+					}
+					.heart-rate {
+						color: #688d95;
+					}
+					.steps {
+						color: #6f4bdb;
+					}
+				}
+			}
+			.weekly-detail--wrapper {
+				margin-left: 20px;
+				.weekly-title {
+					color: rgb(212, 208, 208);
+					font-weight: 500;
+				}
+				.doughnut-chart-wrapper {
+					width: 100%;
+					max-width: 650px;
+				}
+			}
 		}
 	}
 }

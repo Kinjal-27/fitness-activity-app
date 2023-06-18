@@ -11,17 +11,12 @@ import {
 	ArcElement,
 	BarElement
 } from 'chart.js';
-import { Bar, Doughnut, Line } from 'react-chartjs-2';
+import { Line } from 'react-chartjs-2';
+import { formatDate } from 'shared/util/utility';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement, BarElement);
 
 const ActivityChart = ({ activityChartData }: any) => {
-	const formatDate = (dateString: string) => {
-		const date = new Date(dateString);
-		const options = { month: 'long', day: 'numeric' };
-		return date.toLocaleDateString('en-US', options as any);
-	};
-
 	const caloriesBurnedArray = activityChartData.map((activity: Record<string, any>) => activity.calories_burned);
 	const heartRateArray = activityChartData.map((activity: Record<string, any>) => activity.heart_rate.average);
 

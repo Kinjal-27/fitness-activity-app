@@ -135,8 +135,8 @@ export const SideNavIcon = ({ height, width, className }: IIconProps) => (
 export const Logo = ({ height, width, className }: IIconProps) => (
 	<svg
 		viewBox='0 0 48 48'
-		width={width || '48px'}
-		height={height || '48px'}
+		width={width || '50px'}
+		height={height || '50px'}
 		className={className || ''}
 		baseProfile='basic'
 	>

@@ -54,3 +54,8 @@ export const getRandomColor = () => {
 	const randomIndex = Math.floor(Math.random() * colors.length);
 	return colors[randomIndex];
 };
+export const formatDate = (dateString: string) => {
+	const date = new Date(dateString);
+	const options = { month: 'long', day: 'numeric' };
+	return date.toLocaleDateString('en-US', options as any);
+};

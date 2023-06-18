@@ -1,8 +1,7 @@
 import { FC, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { ActivityIcon, Dashboard, Logo, RunningMan, SideNavIcon } from '../icons/icons';
-import LogoImg from 'assets/images/logo.png';
+import { ActivityIcon, Dashboard, Logo } from '../icons/icons';
 
 interface IIconProps {
 	width?: string;
@@ -38,11 +37,9 @@ const SideNav = () => {
 		<nav className='navbar-default' role='navigation'>
 			<div className={`navbar-static-side bg--white d-flex flex-column full--height`}>
 				<div className='title-logo pl--10 pt--15 pb--15 flex align-items--center'>
-					<NavLink to='/dashboard'>
+					<NavLink to='/'>
 						<Logo />
-						{/* <img src={LogoImg} alt='logo' width={60} /> */}
 					</NavLink>
-					{/* <p className='app-title'>FITNESS</p> */}
 				</div>
 				{/* <div className='collapse-icon' onClick={() => setSideBarOpen(!sidebarOpen)}>
 					<SideNavIcon className='cursor-pointer sidenav-icon' />
@@ -55,7 +52,10 @@ const SideNav = () => {
 								key={index}
 								className={`nav-link ${activeMenu === urlLink && 'active-menu'}`}
 							>
-								<div className='nav-link-content d-flex full--width align-items-center bg--twilight-blue '>
+								<div
+									className='nav-link-content d-flex full--width align-items-center bg--twilight-blue'
+									title={`${title}`}
+								>
 									<div>{<SvgIcon />}</div>
 									<p className='menu-label font--18px hide no-margin'>{title}</p>
 								</div>
