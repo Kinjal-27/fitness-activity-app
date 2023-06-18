@@ -10,6 +10,7 @@
 			.activity-header {
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
 				.img-wrapper {
 					width: fit-content;
 					height: fit-content;
@@ -19,6 +20,11 @@
 					margin-right: 20px;
 					.activity-img {
 						width: 60px;
+					}
+				}
+				.back-arrow {
+					.back-arrow-svg {
+						fill: white;
 					}
 				}
 			}

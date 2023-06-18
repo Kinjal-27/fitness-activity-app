@@ -214,21 +214,20 @@
 		}
 	}
 	.activitiy-container {
+		box-sizing: border-box;
 		.inner-wrapper {
-			width: calc(100% - 30px);
+			width: calc(100% - 10px);
 			padding: 20px 15px;
 			.activity-detail--wrapper {
 				.activity-header {
 					.img-wrapper {
-						.activity-img {
-							width: 35px;
-						}
+						display: none;
 					}
 				}
 				.detail-wrapper {
 					flex-direction: column;
 					.card-wrapper {
-						width: calc(100vw - 110px);
+						width: calc(100vw - 90px);
 						margin: 20px auto;
 						.card-img--wrapper {
 							padding: 5px 8px;

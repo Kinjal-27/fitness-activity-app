@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 import activityData from 'assets/JSONDATA/fitnessActivity.json';
 
 import { formatDate } from 'shared/util/utility';
@@ -27,10 +27,12 @@ import { Bar, Line } from 'react-chartjs-2';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, ArcElement);
 
 import '../styles/activityList.scss';
+import { BackArrowIcon } from 'shared/components/icons/icons';
 
 const ActivitiesList = () => {
 	const [fitnessActivityData, setFitnessActivityData] = useState(activityData);
 	const [chartData, setChartData] = useState<any>();
+	const navigate = useNavigate();
 
 	const location = useLocation();
 	const activityId = location.pathname.split('/')[2];
@@ -145,15 +147,24 @@ const ActivitiesList = () => {
 							{items.id === activityId && (
 								<div key={index} className='activity-detail--wrapper'>
 									<div className='activity-header'>
-										<div
-											className='img-wrapper'
-											style={{
-												backgroundColor: activityColorMapper[name]
-											}}
-										>
-											<img src={activityImgMapper[name]} alt='symbol' className='activity-img' />
+										<div className='back-arrow' onClick={() => navigate(-1)}>
+											<BackArrowIcon className='back-arrow-svg' />
 										</div>
-										<p className='font-size--30'>{name}</p>
+										<div>
+											<div
+												className='img-wrapper'
+												style={{
+													backgroundColor: activityColorMapper[name]
+												}}
+											>
+												<img
+													src={activityImgMapper[name]}
+													alt='symbol'
+													className='activity-img'
+												/>
+											</div>
+											<p className='font-size--30'>{name}</p>
+										</div>
 									</div>
 									<div className='detail-wrapper'>
 										<div className='card-wrapper mt--40'>
