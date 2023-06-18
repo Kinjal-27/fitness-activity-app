@@ -5,8 +5,10 @@ import Cycling from 'assets/images/cycling.png';
 import Strength from 'assets/images/strength.png';
 import CaloryBurn from 'assets/images/calories.png';
 import { HeartRate } from 'shared/components/icons/icons';
+import { useNavigate } from 'react-router-dom';
 
 const Activities = ({ activityData }: Record<string, any>) => {
+	const navigate = useNavigate();
 	const limitedActivities = activityData.slice(0, 4);
 
 	interface IActvityMapper {
@@ -34,7 +36,11 @@ const Activities = ({ activityData }: Record<string, any>) => {
 				<tbody className='table-body'>
 					{limitedActivities.map((activity: any, index: number) => {
 						return (
-							<tr key={index} className='table-row flex'>
+							<tr
+								key={index}
+								className='table-row flex'
+								onClick={() => navigate(`/activity/${activity.id}`)}
+							>
 								<td
 									className='table-activity-img--wrapper'
 									style={{

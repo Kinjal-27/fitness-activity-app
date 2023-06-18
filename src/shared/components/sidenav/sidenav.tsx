@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { Dashboard, Logo, SideNavIcon } from '../icons/icons';
+import { ActivityIcon, Dashboard, Logo, RunningMan, SideNavIcon } from '../icons/icons';
 import LogoImg from 'assets/images/logo.png';
 
 interface IIconProps {
@@ -21,6 +21,11 @@ const SIDE_NAV_OPTIONS: ISideNavOpt[] = [
 		SvgIcon: Dashboard,
 		urlLink: '',
 		title: 'Home'
+	},
+	{
+		SvgIcon: ActivityIcon,
+		urlLink: '/activity/activity_1',
+		title: 'Activity'
 	}
 ];
 

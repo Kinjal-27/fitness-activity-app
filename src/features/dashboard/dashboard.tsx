@@ -17,7 +17,6 @@ const Dashboard = () => {
 
 	return (
 		<div className='dashboard-wrapper'>
-			<TopHeader user={name} />
 			<div className='fitness-detail--wrapper flex--column'>
 				<div className='flex'>
 					<Overview userOverview={overview} />
@@ -26,7 +25,7 @@ const Dashboard = () => {
 				</div>
 				<div className='flex'>
 					<Activities activityData={activities} />
-					<ActivityChart />
+					<ActivityChart activityChartData={activities} />
 				</div>
 			</div>
 		</div>
