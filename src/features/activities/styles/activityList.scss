@@ -1,0 +1,27 @@
+@import '../../../assets/styles/variable';
+
+.activitiy-container {
+	height: calc(100vh - 82px);
+	overflow-y: scroll;
+	.inner-wrapper {
+		height: calc(100% - 60px);
+		padding: 30px;
+		.activity-detail--wrapper {
+			.activity-header {
+				display: flex;
+				align-items: center;
+				.img-wrapper {
+					width: fit-content;
+					height: fit-content;
+					padding: 0 5px;
+					border-radius: 15px;
+					margin-bottom: 5px;
+					margin-right: 20px;
+					.activity-img {
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
-import { Dashboard, Logo, SideNavIcon } from '../icons/icons';
+import { ActivityIcon, Dashboard, Logo, RunningMan, SideNavIcon } from '../icons/icons';
 import LogoImg from 'assets/images/logo.png';
 
 interface IIconProps {
@@ -21,6 +21,11 @@ const SIDE_NAV_OPTIONS: ISideNavOpt[] = [
 		SvgIcon: Dashboard,
 		urlLink: '',
 		title: 'Home'
+	},
+	{
+		SvgIcon: ActivityIcon,
+		urlLink: '/activity/activity_1',
+		title: 'Activity'
 	}
 ];
 
@@ -31,12 +36,13 @@ const SideNav = () => {
 
 	return (
 		<nav className='navbar-default' role='navigation'>
-			<div className={`navbar-static-side bg--white d-flex flex-column full--height collapsed`}>
+			<div className={`navbar-static-side bg--white d-flex flex-column full--height`}>
 				<div className='title-logo pl--10 pt--15 pb--15 flex align-items--center'>
 					<NavLink to='/dashboard'>
 						<Logo />
+						{/* <img src={LogoImg} alt='logo' width={60} /> */}
 					</NavLink>
-					<p className='app-title'>FITNESS</p>
+					{/* <p className='app-title'>FITNESS</p> */}
 				</div>
 				{/* <div className='collapse-icon' onClick={() => setSideBarOpen(!sidebarOpen)}>
 					<SideNavIcon className='cursor-pointer sidenav-icon' />
