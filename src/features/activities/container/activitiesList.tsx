@@ -147,7 +147,7 @@ const ActivitiesList = () => {
 							{items.id === activityId && (
 								<div key={index} className='activity-detail--wrapper'>
 									<div className='activity-header'>
-										<div className='back-arrow' onClick={() => navigate(-1)}>
+										<div className='back-arrow cursor--pointer' onClick={() => navigate(-1)}>
 											<BackArrowIcon className='back-arrow-svg' />
 										</div>
 										<div>
