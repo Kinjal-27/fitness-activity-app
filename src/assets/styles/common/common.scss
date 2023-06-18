@@ -1375,6 +1375,8 @@
 				background-color: transparent;
 				border-radius: 50px 0 0 50px;
 				transition: all 0.3s ease-in-out;
+				display: flex;
+				justify-content: center;
 
 				svg {
 					padding: 10px 12px 10px 20px;

@@ -39,14 +39,14 @@ const overview = ({ userOverview }: Record<string, any>) => {
 	};
 
 	return (
-		<div className='flex flex--column ml--20'>
+		<div className='flex flex--column ml--20 overview-container'>
 			<div className='flex justify-content--between align-items--center'>
 				<h5 className='overview-title mb--10'>Overview</h5>
 				<p className='text--gray mr--10'>Monthly</p>
 			</div>
 			<div className='flex overview-wrapper align-items--center'>
 				<div className='width--half'>
-					<div className='doughnut-chart-wrapper pr--30'>
+					<div className='chart-wrapper pr--30'>
 						<Doughnut data={data} options={config as Record<string, any>} />
 					</div>
 				</div>

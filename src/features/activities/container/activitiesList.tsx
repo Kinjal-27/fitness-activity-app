@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router';
 import activityData from 'assets/JSONDATA/fitnessActivity.json';
 
+import { formatDate } from 'shared/util/utility';
 import Running from 'assets/images/running.png';
 import Swimming from 'assets/images/swimming.png';
 import Cycling from 'assets/images/cycling.png';
@@ -67,7 +68,9 @@ const ActivitiesList = () => {
 		chartData?.weekly_data && chartData?.weekly_data.map((activity: Record<string, any>) => activity.steps);
 	const distance =
 		chartData?.weekly_data && chartData?.weekly_data.map((activity: Record<string, any>) => activity.distance);
-	const date = chartData?.weekly_data && chartData?.weekly_data.map((activity: Record<string, any>) => activity.date);
+	const date =
+		chartData?.weekly_data &&
+		chartData?.weekly_data.map((activity: Record<string, any>) => formatDate(activity.date));
 
 	useEffect(() => {
 		handleChartData();
@@ -150,7 +153,7 @@ const ActivitiesList = () => {
 										>
 											<img src={activityImgMapper[name]} alt='symbol' className='activity-img' />
 										</div>
-										<p className='font-size--34'>{name}</p>
+										<p className='font-size--30'>{name}</p>
 									</div>
 									<div className='detail-wrapper'>
 										<div className='card-wrapper mt--40'>
@@ -168,7 +171,7 @@ const ActivitiesList = () => {
 											</div>
 											<div className='flex justify-content--between'>
 												<p className='text--gray font-size--lg'>Steps</p>
-												<p className='value steps'>{steps}</p>
+												<p className='value steps'>{steps} count</p>
 											</div>
 										</div>
 										<div className='card-wrapper mt--40'>
@@ -177,17 +180,17 @@ const ActivitiesList = () => {
 											</div>
 											<div className='flex justify-content--between'>
 												<p className='text--gray font-size--lg'>Heart Rate</p>
-												<p className='value heart-rate'>{heart_rate.average}</p>
+												<p className='value heart-rate'>{heart_rate.average} bpm</p>
 											</div>
 										</div>
 									</div>
 									<div className='weekly-detail--wrapper'>
 										<h5 className='weekly-title mb--10'>Weekly Details</h5>
-										<div className='flex'>
-											<div className='doughnut-chart-wrapper pr--30'>
+										<div className='flex weekly-charts'>
+											<div className='chart-wrapper pr--30'>
 												<Bar data={data} options={config as Record<string, any>} />
 											</div>
-											<div className='doughnut-chart-wrapper pr--30'>
+											<div className='chart-wrapper pr--30'>
 												<Line
 													data={lineChartData}
 													options={lineConfig as Record<string, any>}
@@ -206,6 +209,3 @@ const ActivitiesList = () => {
 };
 
 export default ActivitiesList;
-function formateDate(date: any) {
-	throw new Error('Function not implemented.');
-}

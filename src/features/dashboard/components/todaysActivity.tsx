@@ -8,7 +8,7 @@ interface ITodayActivityProps {
 
 const TodayActivity = ({ todayActivityData }: any) => {
 	return (
-		<div className='flex flex--column ml--45'>
+		<div className='flex flex--column ml--45 todays-activity-container'>
 			<h5 className='overview-title mb--10'>Today's Activity</h5>
 			<div className='flex todays-activity-wrapper'>
 				<div className='today-img-wrapper'>

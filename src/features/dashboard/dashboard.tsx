@@ -17,12 +17,12 @@ const Dashboard = () => {
 	return (
 		<div className='dashboard-wrapper'>
 			<div className='fitness-detail--wrapper flex--column'>
-				<div className='flex'>
+				<div className='flex detail-wrapper'>
 					<Overview userOverview={overview} />
 					<TodayActivity todayActivityData={todays_activity} />
 					<Goals fitnessGoalsData={fitness_goal} />
 				</div>
-				<div className='flex'>
+				<div className='flex activity-dashboard-wrapper'>
 					<Activities activityData={activities} />
 					<ActivityChart activityChartData={activities} />
 				</div>

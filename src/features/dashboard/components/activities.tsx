@@ -31,7 +31,7 @@ const Activities = ({ activityData }: Record<string, any>) => {
 	};
 
 	return (
-		<div className='ml--20'>
+		<div className='ml--20 activities-container'>
 			<h5 className='overview-title mb--20'>Activity List</h5>
 			<table className='activity-table'>
 				<tbody className='table-body'>

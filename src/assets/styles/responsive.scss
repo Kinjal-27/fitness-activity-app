@@ -124,4 +124,137 @@
 	.hide--xs {
 		display: block;
 	}
+	.navbar-default {
+		display: none;
+	}
+	.topheader-wrapper {
+		width: calc(100vw - 31px);
+		.header-title {
+			font-size: 16px;
+		}
+		.profile-wrapper {
+			.avatar-img {
+				width: 40px;
+			}
+			.avatar-name {
+				font-size: 10px;
+			}
+		}
+	}
+	.dashboard-wrapper {
+		.fitness-detail--wrapper {
+			width: calc(100% - 50px);
+			padding: 10px 0;
+			.overview-title {
+				width: 300px;
+				margin-top: 20px;
+			}
+			.detail-wrapper {
+				flex-direction: column;
+			}
+			.overview-container {
+				margin-left: 30px;
+				.overview-wrapper {
+					width: calc(100vw - 110px);
+				}
+			}
+			.chart-wrapper {
+				padding-right: 0;
+				canvas {
+					width: 120px !important;
+					height: 120px !important;
+				}
+			}
+			.todays-activity-container {
+				margin-left: 30px;
+				.todays-activity-wrapper {
+					width: calc(100vw - 110px);
+					padding: 10px 20px;
+					.today-img-wrapper {
+						display: none;
+					}
+				}
+			}
+			.goals-wrapper {
+				margin-left: 30px;
+				.card-wrapper {
+					width: calc(100vw - 110px);
+					padding: 10px 20px;
+				}
+			}
+			.activity-dashboard-wrapper {
+				flex-direction: column;
+				.activity-table {
+					width: calc(100vw - 110px);
+					padding: 10px 20px;
+					.table-body {
+						.table-row {
+							.table-data {
+								display: none !important;
+							}
+							.activity-name-date {
+								flex-direction: row !important;
+								display: flex;
+								align-items: center;
+								justify-content: space-between;
+								width: 100%;
+							}
+							.table-activity-img--wrapper {
+								.table-activity-img {
+									width: 25px;
+								}
+							}
+						}
+					}
+				}
+				.activities-container {
+					margin-left: 30px;
+				}
+			}
+		}
+	}
+	.activitiy-container {
+		.inner-wrapper {
+			width: calc(100% - 30px);
+			padding: 20px 15px;
+			.activity-detail--wrapper {
+				.activity-header {
+					.img-wrapper {
+						.activity-img {
+							width: 35px;
+						}
+					}
+				}
+				.detail-wrapper {
+					flex-direction: column;
+					.card-wrapper {
+						width: calc(100vw - 110px);
+						margin: 20px auto;
+						.card-img--wrapper {
+							padding: 5px 8px;
+							.card-img {
+								width: 25px;
+							}
+						}
+					}
+				}
+				.weekly-detail--wrapper {
+					margin-left: 20px;
+					.weekly-title {
+						font-size: 20px;
+					}
+					.chart-wrapper {
+						margin-top: 20px;
+						canvas {
+							height: 200px !important;
+							width: 306px !important;
+						}
+					}
+					.weekly-charts {
+						flex-direction: column;
+					}
+				}
+			}
+		}
+	}
 }
