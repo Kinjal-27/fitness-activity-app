@@ -257,3 +257,33 @@
 		}
 	}
 }
+
+@media screen and (min-width: 1440px) {
+	.dashboard-wrapper {
+		.fitness-detail--wrapper {
+			.detail-wrapper {
+				justify-content: center;
+			}
+			.activity-dashboard-wrapper {
+				justify-content: space-evenly;
+			}
+		}
+	}
+	.activitiy-container {
+		.inner-wrapper {
+			.activity-detail--wrapper {
+				.detail-wrapper {
+					justify-content: center;
+				}
+				.weekly-detail--wrapper {
+					.weekly-title {
+						text-align: center;
+					}
+					.weekly-charts {
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}
